@@ -1,0 +1,27 @@
+:root {
+
+  --primary-color: #363062;
+  --primary-color-light: #4D4C7D;
+  --primary-light: #E9D5DA;
+}
+
+
+body {
+  background-color: var(--primary-light);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--primary-color-light);
+    border-color: var(--primary-color-light);
+}
+
+.pointer {
+  cursor: pointer;
+}

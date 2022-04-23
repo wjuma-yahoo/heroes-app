@@ -1,0 +1,1 @@
+export { HeroesRoute } from './HeroesRoute';
