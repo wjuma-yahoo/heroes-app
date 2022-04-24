@@ -19,11 +19,11 @@ export const DashboardRoute = () => {
             <div className="card">
               <div className="card-body">
                 <Routes>
-                  <Route path="marvel" element={<MarvelScreen />} />
-                  <Route path="dc" element={<DcScreen />} />
+                  <Route path="marvel" element={<MarvelScreen publisher="Marvel Comics" />} />
+                  <Route path="dc" element={<DcScreen publisher="DC Comics" />} />
                   <Route path="search" element={<SearchScreen />} />
-                  <Route path="hero" element={<HeroScreen />} />
-                  <Route path="/" element={<MarvelScreen />} />
+                  <Route path="hero/:heroeId" element={<HeroScreen />} />
+                  <Route path="/" element={<MarvelScreen publisher="Marvel Comics" />} />
                 </Routes>
               </div>
             </div>

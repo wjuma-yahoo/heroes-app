@@ -1,6 +1,5 @@
 import React from 'react';
-import { HeroScreen } from '../hero/HeroScreen';
 
-export const MarvelScreen = () => {
-  return (<HeroScreen publisher="Marvel Comics" />);
-}
+import { HeroList } from '../hero/HeroList';
+
+export const MarvelScreen = ({ publisher }) => (<HeroList publisher={publisher}/>);

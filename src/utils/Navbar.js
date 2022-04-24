@@ -7,7 +7,8 @@ export const Navbar = ({ brand }) => {
 
   const navigate = useNavigate();
 
-  const handlerLogout = () => {
+  const handlerLogout = (e) => {
+    e.preventDefault();
     navigate('/login', {
       replace: true
     });
@@ -43,7 +44,7 @@ export const Navbar = ({ brand }) => {
               <NavLink to="/profile" className="nav-link">Wilson</NavLink>
             </li>
             <li className="nav-item">
-              <a onClick={handlerLogout} className="nav-link pointer">Logout</a>
+              <a href="/login" onClick={handlerLogout} className="nav-link pointer">Logout</a>
             </li>
           </ul>
         </div>

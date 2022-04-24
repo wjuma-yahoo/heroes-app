@@ -17,7 +17,7 @@ export const HeroCard = ({
       <div className="row">
         <div className="col-4 d-flex justify-content-center align-items-center">
 
-          <img src={ imagePath } className="w-100 px-1" />
+          <img src={ imagePath } alt={id} className="w-100 px-1" />
 
         </div>
         <div className="col-8">
