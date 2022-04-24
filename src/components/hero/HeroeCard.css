@@ -1,0 +1,18 @@
+.heroe {}
+.heroe__image {
+  width: 100%;
+}
+.heroe__superhero {
+  font-size: 13px;
+}
+.heroe__alterego{
+  font-size: 12px;
+}
+.heroe__characters,
+.heroe__firstappearance {
+  font-size: 10px;
+}
+.heroe__link {
+  font-size: 13px;
+  text-decoration: none;
+}

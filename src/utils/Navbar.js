@@ -38,6 +38,13 @@ export const Navbar = ({ brand }) => {
                   return "nav-link "+(isActive ? 'active' : '');
                 }}>DC</NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                to="/search"
+                className={({isActive}) => {
+                  return "nav-link "+(isActive ? 'active' : '');
+                }}>Search</NavLink>
+            </li>
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item">

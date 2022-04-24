@@ -1,18 +1,19 @@
-import React from 'react';
+import { useMemo } from 'react';
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { getHeroeById } from '../../selectors/getHeroeById';
 
 export const HeroScreen = () => {
 
+  // Navigate Hook
   const navigate = useNavigate();
 
   // Getting heroeId from params
   const { heroeId } = useParams();
 
   // Obtain heroe
-  const heroe = getHeroeById(heroeId);
+  const heroe = useMemo(() => getHeroeById(heroeId), [heroeId]);
 
-  // Error finding heroe redirect page
+  // Error finding heroe redirect page /marvel
   if (!heroe) {
     return <Navigate to="/marvel" />
   }
@@ -38,7 +39,7 @@ export const HeroScreen = () => {
   return (
     <div className="row">
       <div className="col-4">
-        <img className="img-thumbnail" src={imagePath} alt={superhero} />
+        <img className="img-thumbnail animate__animated animate__fadeInLeft" src={imagePath} alt={superhero} />
       </div>
       <div className="col-8">
         <div className="card">

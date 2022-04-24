@@ -16,17 +16,15 @@ export const DashboardRoute = () => {
         <div className="row">
           <div className="col-12 mt-3">
 
-            <div className="card">
-              <div className="card-body">
-                <Routes>
-                  <Route path="marvel" element={<MarvelScreen publisher="Marvel Comics" />} />
-                  <Route path="dc" element={<DcScreen publisher="DC Comics" />} />
-                  <Route path="search" element={<SearchScreen />} />
-                  <Route path="hero/:heroeId" element={<HeroScreen />} />
-                  <Route path="/" element={<MarvelScreen publisher="Marvel Comics" />} />
-                </Routes>
-              </div>
-            </div>
+
+          <Routes>
+            <Route path="marvel" element={<MarvelScreen publisher="Marvel Comics" />} />
+            <Route path="dc" element={<DcScreen publisher="DC Comics" />} />
+            <Route path="search" element={<SearchScreen />} />
+            <Route path="hero/:heroeId" element={<HeroScreen />} />
+            <Route path="/" element={<MarvelScreen publisher="Marvel Comics" />} />
+          </Routes>
+
 
           </div>
         </div>
