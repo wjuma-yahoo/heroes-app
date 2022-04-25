@@ -11,7 +11,7 @@ export const HeroList = ({ publisher }) => {
 
   const heroesRendered = _.map(heroes, (heroe) => {
     return (
-      <div className="col-4 animate__animated animate__fadeIn"  key={heroe.id}>
+      <div className="col-4"  key={heroe.id}>
         <HeroCard {...heroe } />
       </div>
     );

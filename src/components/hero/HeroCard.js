@@ -15,7 +15,7 @@ export const HeroCard = ({
   const imagePath = `/assets/${id}.jpg`;
 
   return (
-    <div className="card mb-3 heroe">
+    <div className="card mb-3 heroe animate__animated animate__fadeIn">
       <div className="row card-body">
         <div className="col-4 d-flex align-items-center">
 

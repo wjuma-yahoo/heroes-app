@@ -1,0 +1,10 @@
+.heroesMatches {}
+.heroesMatches__length {
+  font-weight: 700;
+}
+.heroesMatches__q {
+  font-weight: 900;
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-style: italic;
+}
