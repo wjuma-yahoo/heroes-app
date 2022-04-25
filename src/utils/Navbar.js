@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../auth/authContext';
 
 import './Navbar.css';
 
 export const Navbar = ({ brand }) => {
 
   const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
+
 
   const handlerLogout = (e) => {
     e.preventDefault();
@@ -48,7 +51,9 @@ export const Navbar = ({ brand }) => {
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink to="/profile" className="nav-link">Wilson</NavLink>
+              <NavLink to="/profile" className="nav-link text-capitalize">
+                { (user.logged) && user.name }
+              </NavLink>
             </li>
             <li className="nav-item">
               <a href="/login" onClick={handlerLogout} className="nav-link pointer">Logout</a>
