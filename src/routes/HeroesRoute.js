@@ -13,7 +13,11 @@ export const HeroesRoute = () => {
       <div className="">
         <Routes>
           <Route path="/login" element={<LoginScreen />} />
-          <Route path="/*" element={<DashboardRoute />}/>
+          <Route path="/*" element={
+              <PrivateRoute>
+                <DashboardRoute />
+              </PrivateRoute>
+            }/>
         </Routes>
       </div>
     </BrowserRouter>

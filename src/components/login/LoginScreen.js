@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import { types } from '../../types';
+import { AuthContext } from '../../auth/authContext';
 
 export const LoginScreen = () => {
 
   const navigate = useNavigate();
+  const { dispatch } = useContext(AuthContext);
 
   const handlerLogin = () => {
-    navigate('/', {
-      replace: true // Reemplaza el historial de paginas evitando volver a la pagina actual
-    });
+
+    const action = {
+      type: types.login,
+      payload: { name: 'wilson' }
+    }
+
+    dispatch(action);
+
+    navigate('/', { replace: true });
+
   }
 
   return (
